@@ -1,0 +1,22 @@
+{
+  "name": "aegisauth-server",
+  "version": "1.0.0",
+  "description": "AegisAuth Production Backend - Adaptive WebAuthn, MFA, KBA, Encrypted Vault & Security Operations",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "cookie-parser": "^1.4.7",
+    "sql.js": "^1.12.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "dotenv": "^16.4.7",
+    "@simplewebauthn/server": "^13.1.1"
+  }
+}

@@ -1,0 +1,29 @@
+🔐 1. Authentication & Identity
+FIDO2 / WebAuthn Passkeys (Primary): Hardware-backed keypairs. Private key stays locked in the device TPM/Enclave; public key stored on server.
+Facial Recognition Biometrics: Live camera scan extracting a 128-point facial topology vector; verified locally with cosine similarity (no raw photos saved).
+Live Password Strength Analyzer: Evaluates length, diversity, sequential keys (123, abc), repetitions, and breached dictionaries. Provides real-time actionable recommendations as the user types.
+Personalized KBA: User authors their own custom question and secret answer during registration (hashed with 12-round salted bcrypt; zero generic questions).
+Adaptive Risk Engine: Evaluates device fingerprints, consecutive failed streaks, velocity, off-peak hours, and network reputation to scale friction:
+Low Risk: One-touch Passkey or Face scan.
+Medium Risk: Master Password + 6-Digit OTP (5-min expiry).
+High Risk: Master Password + OTP + Personalized KBA.
+Fallback Flow: "Try Another Way" seamlessly activates Password → OTP → KBA if biometric verification is unavailable or fails.
+📁 2. DigiLocker Encrypted Document Vault
+AES-256-GCM Storage: Files encrypted before disk write with unique IVs and 128-bit integrity tags.
+On-the-Fly Ephemeral Decryption: Decrypted into volatile server RAM only for authorized sessions; preview PDFs, images, and credentials in-browser.
+Vault Operations: Upload, preview modal, secure download, category filters (Identity, Financial, Legal, Healthcare, Confidential), search, and deletion.
+🛡️ 3. Security Operations Center (SOC) & Telemetry
+TShark Wireline Telemetry Stream: Live packet capture inspecting protocols (TLS, HTTP, TCP, DNS) and payload details.
+Active Session Management: Inspects active endpoints (IP, browser, location) with instant session revocation buttons.
+Security Audit Logs: Tamper-evident ledger with JSON payload inspectors and JSON export capabilities.
+Alerts Manager: Real-time threat detection with resolution tracking.
+User Governance: Inspects registered accounts, risk scores, and offers an administrative risk reset button.
+🤖 4. Conversational RAG Copilot
+Embedded AI assistant answering questions on WebAuthn, MFA, KBA, AES-256 encryption, and accessibility.
+Zero-Trust Guardrail: Automatically detects and rejects prompt injection attempts to reveal passwords, private keys, or master encryption keys.
+♿ 5. WCAG 2.1 AA Accessibility & Usability
+High-Contrast Mode: Enhanced luminosity and sharp border contrast.
+Large Typography Mode: Dynamic scalable fonts across all pages.
+Screen Reader (TTS): Speech synthesis voice announcer + ARIA live regions.
+Reduced Motion Support: Canvas particles and intense transitions turn off automatically when prefers-reduced-motion is detected.
+Keyboard Navigation: Visible cyan focus rings (focus-visible) and skip-to-content links.
